@@ -55,9 +55,9 @@ public class COSTOFATRIP {
        int totalcost;
       //operation
        
-       totalcost = (int) (float) (payments * 12);
+       totalcost = (int)(float)((payments * 12));
        
-       System.out.println(" The total cost of the trip is " + payments + " * " + 12 + " is equal to --> " + totalcost);
+       System.out.println("The total cost of the trip is " + (payments)+ " * " + 12 + " is equal to --> " + totalcost);
        
        //The total cost of the trip whit all payments is the 18457
        
