@@ -59,6 +59,9 @@ public class COSTOFATRIP {
        
        System.out.println(" The total cost of the trip is " + payments + " * " + 12 + " is equal to --> " + totalcost);
        
+       //The total cost of the trip whit all payments is the 18457
+       
+       
        
        
        
