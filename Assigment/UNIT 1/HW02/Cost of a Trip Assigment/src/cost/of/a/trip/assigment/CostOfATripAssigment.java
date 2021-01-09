@@ -1,10 +1,15 @@
-package costofatrip;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package cost.of.a.trip.assigment;
 
 /**
  *
  * @author Sony Vaio
  */
-public class COSTOFATRIP {
+public class CostOfATripAssigment {
 
     /**
      * @param args the command line arguments
@@ -12,8 +17,8 @@ public class COSTOFATRIP {
     public static void main(String[] args) {
         //My family and I decided to travel to Italy, the personal cost of the trip is n
     
-        short n;
-        short people;
+        int n;
+        int people;
         int  cash;
         
         n = 3450;
@@ -51,32 +56,30 @@ public class COSTOFATRIP {
        
        //our trip will be paid in payment of 1538.125  
        //The total cost of the trip will be very high
-      
-       int totalcost;
-      //operation
+       // I had stimated an extra budget for additional services
        
-       totalcost = (int)(float)((payments * 12));
+       short money;
+       short days;
+       short extracash;
+       short budget;
        
-       System.out.println("The total cost of the trip is " + (payments)+ " * " + 12 + " is equal to --> " + totalcost);
-       
-       //The total cost of the trip whit all payments is the 18457
-       
-       
-       
-       
-       
-       
-      
-   
-               
-       
-       
+       money = 70;
+       days = 3;
         
        
-     
+       //operation
+       extracash = (short) (money * days) ;
        
-                
-        
+       System.out.println(" For additional services I have " + money + " * " + days + " is equal to --> " + extracash);
+       
+       //I had a problem for this reason I reduce my budget whith $10 every day
+       
+       budget = (short) (money - 10);
+       
+       System.out.println(" The new budget is " + money + " - " + 10 + "is equal to --> " + budget);
     }
     
 }
+
+
+    
