@@ -48,7 +48,7 @@ public class WS05INTERATIONS {
        int table =7;
        for(int j =1; j<=top; j++ ){
            product = table * j;
-           System.out.println("7 * " + "=" + product);
+           System.out.println("7 * " + j + "=" + product);
        }
     }
       
