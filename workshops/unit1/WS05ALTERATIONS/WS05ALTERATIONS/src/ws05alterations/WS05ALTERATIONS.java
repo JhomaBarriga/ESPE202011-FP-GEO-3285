@@ -42,10 +42,10 @@ public class WS05ALTERATIONS {
          for(int j=1; j<10;j+=2){
              System.out.println("odd number -> " + j);
         }
-         System.out.println("Multiplication Tables :9");
+         System.out.println("Multiplication Tables :7");
          int top=12;
          int product=0;
-         int table=9;
+         int table=7;
          for(int j=1 ;j <= top ; j++){
              product=table * j;
              System.out.println("7 * " + j + " = " + product);
