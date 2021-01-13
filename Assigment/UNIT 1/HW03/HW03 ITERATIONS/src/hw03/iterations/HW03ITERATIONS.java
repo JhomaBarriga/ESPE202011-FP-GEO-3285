@@ -31,19 +31,16 @@ public class HW03ITERATIONS {
         int table =7;
         for(int j =1; j<=top; j++ ){
            product = table * j;
-           System.out.println("7 * " + "=" + product);
+           System.out.println("7 * " + j + "=" + product);
+        }
+        System.out.println(" Subtracion  : 7"); 
+        int base = 7;
+        int difference= 0;
+  
+        for(int j=1; j<=base; j++ ){
+           difference = base - j;
+           System.out.println("7 - " + j + "=" + difference);
         }
         
-        System.out.println("Sum Tables  : 7"); 
-       int stop = 7;
-       int sum= 0;
-       int total =7;
-       
-       for(int j =1; j<=stop; j++ ){
-           total = sum + j;
-           System.out.println("7 + " + "=" + total);
-       }
-      
- 
     }
 }
