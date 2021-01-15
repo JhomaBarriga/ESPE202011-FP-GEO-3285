@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hw04;
+package hw04menu;
 
 import java.util.Scanner;
 
@@ -11,14 +11,14 @@ import java.util.Scanner;
  *
  * @author Sony Vaio
  */
-public class HW04 {
+public class HW04MENU {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-                Scanner input = new Scanner(System.in);
+              Scanner input = new Scanner(System.in);
         boolean mainloop = true;
         int option;
         
@@ -88,6 +88,5 @@ public class HW04 {
         }while (option != 5);
     }
 }
-        
    
    
