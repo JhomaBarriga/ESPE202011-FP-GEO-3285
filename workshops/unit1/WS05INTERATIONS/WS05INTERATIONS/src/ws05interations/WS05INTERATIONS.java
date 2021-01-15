@@ -42,6 +42,7 @@ public class WS05INTERATIONS {
             System.out.println("odd number -> " +j);
            
         }
+      
        System.out.println("Multiplication Tables  : 7"); 
        int top=12;
        int product=0;
