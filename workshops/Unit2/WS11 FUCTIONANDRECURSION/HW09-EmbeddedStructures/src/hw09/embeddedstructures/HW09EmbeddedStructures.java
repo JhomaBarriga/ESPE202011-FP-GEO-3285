@@ -103,6 +103,5 @@ public class HW09EmbeddedStructures {
             System.out.println( operand1 + " * " + multiplier1 + " = " + product2);
         }
     }
-    
 }
  
