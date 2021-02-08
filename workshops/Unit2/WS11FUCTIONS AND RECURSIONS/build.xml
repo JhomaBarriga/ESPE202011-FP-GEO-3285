@@ -7,8 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="HW10-FUCTIONS" default="default" basedir=".">
-    <description>Builds, tests, and runs the project HW10-FUCTIONS.</description>
+<project name="WS11FUCTIONS_AND_RECURSIONS" default="default" basedir=".">
+    <description>Builds, tests, and runs the project WS11FUCTIONS AND RECURSIONS.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
@@ -58,7 +58,7 @@
 
     An example of overriding the target for project execution could look like this:
 
-        <target name="run" depends="HW10-FUCTIONS-impl.jar">
+        <target name="run" depends="WS11FUCTIONS_AND_RECURSIONS-impl.jar">
             <exec dir="bin" executable="launcher.exe">
                 <arg file="${dist.jar}"/>
             </exec>

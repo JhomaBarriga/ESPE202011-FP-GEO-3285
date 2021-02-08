@@ -3,25 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hw09.embeddedstructures;
-
+package ws11fuctions.and.recursions;
 
 import java.util.Scanner;
 
 /**
  *
- * @author JHOMARA BARRIGA FERNANDA BACUY ISRAEL ARTEAGA XIOMARA BORJA
+ * @author Sony Vaio
  */
-public class HW09EmbeddedStructures {
+public class WS11FUCTIONSANDRECURSIONS {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // DONE
-        //Variables declaration
-     
-        int operand1;
+        // TODO code application logic here
+    int operand1;
         int operand2;
         int sum;
         int product1;
@@ -57,6 +54,11 @@ public class HW09EmbeddedStructures {
             } else {
                 System.out.println("======= INVALID 3312 ======");
             }
+            int n =  5 ;
+            int fact =  0 ;
+            fact = factorial (n);
+            System.out.println( " factorial de "  + n +  " es igual a -> "  + fact);
+            
             System.out.println("Do you want to continue: YES(1), NO (0)");
             data = input.nextInt();
             if (data == 0) {
@@ -103,5 +105,17 @@ public class HW09EmbeddedStructures {
             System.out.println( operand1 + " * " + multiplier1 + " = " + product2);
         }
     }
+    public  static  int  factorial ( int  n ) {
+        if (n <  0 ) {
+            return  - 1 ;
+        } else {
+            if (n ==  0 ) {
+                return  1 ;
+            } else {
+                return (n * factorial (n -  1 ));
+            }
+        }
+    }
+    
 }
- 
+  
