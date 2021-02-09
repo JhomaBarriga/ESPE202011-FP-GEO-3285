@@ -59,10 +59,12 @@ public class WS11FUCTIONSANDRECURSIONS {
             fact = factorial (n);
             System.out.println( " factorial de "  + n +  " es igual a -> "  + fact);
             
-            System.out.println("Do you want to continue: YES(1), NO (0)");
+            System.out.println("Do you want to continue: YES(Any number), NO (0)");
             data = input.nextInt();
             if (data == 0) {
+                System.out.println("See you friend");
                 System.exit(0);
+ 
             }
         } while (operand1 != 1 || operand2 != 1);
     }
