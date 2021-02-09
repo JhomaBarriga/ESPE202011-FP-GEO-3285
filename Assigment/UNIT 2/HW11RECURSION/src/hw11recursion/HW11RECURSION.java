@@ -17,6 +17,20 @@ public class HW11RECURSION {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        int num;
+        int position ;
+        System.out.println("Write a number that you know inverst");
+        num = input.nextInt();
+        System.out.println("Write a postion");
+        position = input.nextInt();  //// The postion is the number of digits subtracted from 1
+        int newnumber = InverstNumber(num , position);
+        System.out.println("The inverted number of " + num + " is  " + newnumber);
+        System.out.println();
+        
+        System.out.println("PROJECT");
+        
    
     Scanner scanner = new Scanner(System.in);
         boolean mainLoop = true;
@@ -245,12 +259,21 @@ public class HW11RECURSION {
                     System.out.println("ERROR ✘ \n");
                     System.exit(0);
                     break;
-
+                
+                    
             }
 
         } while (option < 4);
 
     }
+    
+    public static int InverstNumber(int num ,int position){
+        if (num < 10){
+            return num;
+        }else{
+            return(num % 10)* (int) Math.pow(10,position) + (InverstNumber(num / 10, position-1));
+        }
+    }   
 
     public static void ShowConvertions(float degreesLatitude, float degreesLongitude) {
         float xEllipsoid;
@@ -344,5 +367,6 @@ public class HW11RECURSION {
         System.out.printf("\n Kelvin degrees are: " + k);
         System.out.println();
     }
+    
 
 }

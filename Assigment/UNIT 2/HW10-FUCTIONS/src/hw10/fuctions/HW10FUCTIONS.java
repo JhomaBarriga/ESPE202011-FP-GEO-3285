@@ -102,7 +102,9 @@ public class HW10FUCTIONS {
         int product;
         
         product = multiplicand * multiplier;
-        
+                
+        product = multiplicand * multiplier;
+
         return product;
     }
     public  static  int  factorial ( int  n ) {
