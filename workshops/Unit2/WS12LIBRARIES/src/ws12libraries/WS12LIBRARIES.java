@@ -42,19 +42,19 @@ public class WS12LIBRARIES {
         base = 3;
         exponent = 2;
         //power = 9?
-        power = (float)Math.pow(base,exponent);
+        power = (float)computePower(base,exponent);
         System.out.println( base + " ^ " + exponent +  " = " + power);
 
         base = 2;
         exponent = 4;
         //power = 16 ?
-        power = (float)Math.pow(base,exponent);
+        power = (float)computePower(base,exponent);
         System.out.println( base + " ^ " + exponent +  " = " + power);
         
         base = 78;
         exponent = 5;
         //calculator 78^5 is  2887174368
-        power = (float)Math.pow(base,exponent);
+        power = (float)computePower(base,exponent);
         System.out.println( base + " ^ " + exponent +  " = " + power);
         
         number = -5;
@@ -70,7 +70,7 @@ public class WS12LIBRARIES {
     
     public static float computePower(float base, float exponent){
         float power;
-        power = 0.0F;
+        power = 1.0F;
         
         for(int i =1 ; i<=(int)exponent;i++){
             power =  power*base;
