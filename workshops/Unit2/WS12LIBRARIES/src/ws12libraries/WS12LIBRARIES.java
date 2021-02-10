@@ -53,8 +53,9 @@ public class WS12LIBRARIES {
         
         base = 78;
         exponent = 5;
-        //calculator 78^5
-        //2887174368
+        //calculator 78^5 is  2887174368
+        power = (float)Math.pow(base,exponent);
+        System.out.println( base + " ^ " + exponent +  " = " + power);
         
         number = -5;
         absoluteValue = getAbsoluteValue(number);
