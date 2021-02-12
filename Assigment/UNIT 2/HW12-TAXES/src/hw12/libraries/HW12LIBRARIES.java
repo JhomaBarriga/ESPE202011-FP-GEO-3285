@@ -19,7 +19,7 @@ public class HW12LIBRARIES {
     public static void main(String[] args) {
         // CALCULE IVA OF A PRODUCT
 
-        Scanner input = new Scanner(System.int);
+        Scanner input = new Scanner(System.in);
 
         System.out.println("===============WELCOME==============");
         System.out.println("CHOOSE THE OPTION THAT YOU WANT TO DO");
@@ -109,7 +109,7 @@ public class HW12LIBRARIES {
                 double percentage = 0.05;
 
                 System.out.println(" ♦♦♦♦♦♦ Write the money that you have for the trip ♦♦♦♦♦♦");
-                money = input.nextInt();
+                money = input.nextDouble();
                 if (money > 1200) {
                     CalculateTaxSendMoney(money);
                 } else {
@@ -125,7 +125,7 @@ public class HW12LIBRARIES {
                 double percentage = 0.05;
 
                 System.out.println(" The cost of the buys that you have been");
-                valueofbuys = input.nextInt();
+                valueofbuys = input.nextDouble();
                 if (valueofbuys > 5017.33) {
                     CalculateTaxInternationalBuys(valueofbuys, percentage);
                 }
@@ -243,9 +243,9 @@ public class HW12LIBRARIES {
         double expenses;
         double taxbase;
         System.out.println("Write your income, please");
-        income = input.nextInt();
+        income = input.nextDouble();
         System.out.println("Write your expensess");
-        expenses = input.nextInt();
+        expenses = input.nextDouble();
         taxbase = income - expenses;
         System.out.println("Your taxbase is ->" + taxbase);
         return taxbase;
