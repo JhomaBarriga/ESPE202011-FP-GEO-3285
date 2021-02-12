@@ -29,15 +29,15 @@ public class WS12LIBRARIES {
         
         number = 9; //squereRoot = ? -> 3
         squareRoot = (float) Math.sqrt(number);
-        System.out.println("The square root of -> " + number + "is equal ->" + squareRoot );
+        System.out.println("The square root of -> " + number + " is equal -> " + squareRoot );
         
         number = 49; // 
         squareRoot = (float) Math.sqrt(number);
-        System.out.println("The square root of -> " + number + "is equal ->" + squareRoot );
+        System.out.println("The square root of -> " + number + " is equal -> " + squareRoot );
         
         number = 5; //? 2.23...
         squareRoot = (float) Math.sqrt(number);
-        System.out.println("The square root of -> " + number + "is equal ->" + squareRoot );
+        System.out.println("The square root of -> " + number + " is equal -> " + squareRoot );
        
         base = 3;
         exponent = 2;
