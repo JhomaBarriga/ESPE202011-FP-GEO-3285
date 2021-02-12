@@ -19,7 +19,7 @@ public class HW12LIBRARIES {
     public static void main(String[] args) {
         // CALCULE IVA OF A PRODUCT
 
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.int);
 
         System.out.println("===============WELCOME==============");
         System.out.println("CHOOSE THE OPTION THAT YOU WANT TO DO");
