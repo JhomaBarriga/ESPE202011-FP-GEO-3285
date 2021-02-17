@@ -39,7 +39,7 @@ public class HW12LIBRARIES {
 
             System.out.println("♦♦♦♦♦♦  Write the cost of the product ♦♦♦♦♦♦ ");
             costofproduct = input.nextInt();
-            double TaxIva = GetTaxIva(costofproduct, percentage);
+            double TaxIva = CalculateTaxIVa(costofproduct, percentage);
             System.out.println(" The IVA of this product is --> " + TaxIva);
 
         }
@@ -49,34 +49,94 @@ public class HW12LIBRARIES {
             double expenses;
             double taxbase;
 
-            taxbase = GetTaxBase(input);
+            System.out.println("Write your income, please");
+            income = input.nextDouble();
+            System.out.println("Write your expensess");
+            expenses = input.nextDouble();
+            taxbase = CalculateTaxBase(income, expenses);
+            System.out.println("Your taxbase is ->" + taxbase);
 
             if (taxbase <= 11212) {
-                ShowTaxRentcase1(taxbase);
+                double Basicfraction = 0;
+
+                double residue = taxbase - Basicfraction;
+                double percentagetax = residue * 0.00;
+                double Taxbasicfraction = 0;
+                CalculateTaxRentCase1(Taxbasicfraction, percentagetax);
+                System.out.println(" You shoul not do any contribution");
+
             } else {
                 if (taxbase > 11212 && taxbase <= 14285) {
-                    ShowTaxRentCase2(taxbase);
+                    double Basicfraction = 11212;
+                    double residue = taxbase - Basicfraction;
+                    double percentagetax = residue * 0.05;
+                    double Taxbasicfraction = 0;
+                    double TaxRent = CalculateRentCase2(Taxbasicfraction, percentagetax);
+                    System.out.println(" The Tax of the rent is " + TaxRent);
+
                 } else {
                     if (taxbase > 14285 && taxbase <= 17854) {
-                        ShowTaxRentCase3(taxbase);
+                        double Basicfraction = 14285;
+                        double residue = taxbase - Basicfraction;
+                        double percentagetax = residue * 0.10;
+                        double Taxbasicfraction = 154;
+                        double TaxRent = CalculateTaxRentCase3(Taxbasicfraction, percentagetax);
+                        System.out.println(" The Tax of the rent is " + TaxRent);
+
                     } else {
                         if (taxbase > 17854 && taxbase <= 21442) {
-                            ShowTaxRentCase4(taxbase);
+                            double Basicfraction = 17854;
+                            double residue = taxbase - Basicfraction;
+                            double percentagetax = residue * 0.12;
+                            double Taxbasicfraction = 511;
+                            double TaxRent = CalculateRentCase4(Taxbasicfraction, percentagetax);
+                            System.out.println(" The Tax of the rent is " + TaxRent);
+
                         } else {
                             if (taxbase > 21442 && taxbase <= 42874) {
-                                ShowTaxRentCase5(taxbase);
+                                double Basicfraction = 21442;
+                                double residue = taxbase - Basicfraction;
+                                double percentagetax = CalculateTaxIVa(residue, 0.15);
+                                double Taxbasicfraction = 941;
+                                double TaxRent = CalculateTaxRentCase5(Taxbasicfraction, percentagetax);
+                                System.out.println(" The Tax of the rent is " + TaxRent);
+
                             } else {
                                 if (taxbase > 42874 && taxbase <= 64297) {
-                                    ShowTaxRentCase6(taxbase);
+                                    double Basicfraction = 42874;
+                                    double residue = taxbase - Basicfraction;
+                                    double percentagetax = residue * 0.20;
+                                    double Taxbasicfraction = 4156;
+                                    double TaxRent = CalculateRentCase6(Taxbasicfraction, percentagetax);
+                                    System.out.println(" The Tax of the rent is " + TaxRent);
+
                                 } else {
                                     if (taxbase > 64297 && taxbase <= 85729) {
-                                        ShowTaxRentCase7(taxbase);
+                                        double Basicfraction = 64297;
+                                        double residue = taxbase - Basicfraction;
+                                        double percentagetax = residue * 0.25;
+                                        double Taxbasicfraction = 8440;
+                                        double TaxRent = CalculateTaxRentCase7(Taxbasicfraction, percentagetax);
+                                        System.out.println(" The Tax of the rent is " + TaxRent);
+
                                     } else {
                                         if (taxbase > 85729 && taxbase <= 114288) {
-                                            ShowTaxRentCase8(taxbase);
+                                            double Basicfraction = 85729;
+                                            double residue = taxbase - Basicfraction;
+                                            double percentagetax = residue * 0.30;
+                                            double Taxbasicfraction = 13798;
+                                            double TaxRent = CalculateRentCase8(Taxbasicfraction, percentagetax);
+                                            System.out.println(" The Tax of the rent is " + TaxRent);
+
                                         } else {
                                             if (taxbase > 114288) {
-                                                ShowTaxRentCase9(taxbase);
+                                                double Basicfraction = 112288;
+                                                double residue = taxbase - Basicfraction;
+                                                double percentagetax = residue * 0.35;
+                                                double Taxbasicfraction = 22366;
+                                                double TaxRent = CalculateTaxRentCase9(Taxbasicfraction, percentagetax);
+                                                System.out.println(" The Tax of the rent is " + TaxRent);
+
                                             }
                                         }
                                     }
@@ -91,7 +151,8 @@ public class HW12LIBRARIES {
             }
         }
 
-        if (option == 3) { /////DIVISIAS
+        if (option
+                == 3) { /////DIVISIAS
 
             System.out.println("=============CALCULATE DIVISAS============");
             System.out.println("CHOOSE THE OPTION THAT YOU WANT TO DO");
@@ -111,7 +172,9 @@ public class HW12LIBRARIES {
                 System.out.println(" ♦♦♦♦♦♦ Write the money that you have for the trip ♦♦♦♦♦♦");
                 money = input.nextDouble();
                 if (money > 1200) {
-                    CalculateTaxSendMoney(money);
+                    taxforpay = CalculateTaxSendMoney(money);
+                    System.out.println("The tax thar you must pay is ->" + taxforpay);
+
                 } else {
                     if (money <= 1200) {
                         System.out.println(" You should not pay any tax");
@@ -127,138 +190,85 @@ public class HW12LIBRARIES {
                 System.out.println(" The cost of the buys that you have been");
                 valueofbuys = input.nextDouble();
                 if (valueofbuys > 5017.33) {
-                    CalculateTaxInternationalBuys(valueofbuys, percentage);
+                    Taxforbuys = CalculateTaxInternationalBuys(valueofbuys, percentage);
+                    System.out.println(" You should pay -> " + Taxforbuys + " for the buys");
+
                 }
             }
         }
-        if (option == 5) {
+        if (option
+                == 5) {
             System.out.println(" See you later friend");
         }
     }
 
-    private static void CalculateTaxInternationalBuys(double valueofbuys, double percentage) {
+    private static double CalculateTaxInternationalBuys(double valueofbuys, double percentage) {
         double Taxforbuys;
         Taxforbuys = (valueofbuys - 5017.33) * percentage;
-        System.out.println(" You should pay -> " + Taxforbuys + " for the buys");
+        return Taxforbuys;
     }
 
-    private static void CalculateTaxSendMoney(double money) {
+    private static double CalculateTaxSendMoney(double money) {
         double taxforpay;
         taxforpay = (money - 1200) * 0.05;
-        System.out.println("The tax thar you must pay is ->" + taxforpay);
+        return taxforpay;
     }
 
-    private static void ShowTaxRentCase9(double taxbase) {
-        double Basicfraction = 112288;
-        //calculate
-        double residue = taxbase - Basicfraction;
-        double percentagetax = residue * 0.35;
-        double Taxbasicfraction = 22366;
+    private static double CalculateTaxRentCase9(double Taxbasicfraction, double percentagetax) {
         double TaxRent = Taxbasicfraction + percentagetax;
-        System.out.println(" The Tax of the rent is " + TaxRent);
+        return TaxRent;
     }
 
-    private static void ShowTaxRentCase8(double taxbase) {
-        double Basicfraction = 85729;
-        //calculate
-        double residue = taxbase - Basicfraction;
-        double percentagetax = residue * 0.30;
-        double Taxbasicfraction = 13798;
+    private static double CalculateRentCase8(double Taxbasicfraction, double percentagetax) {
         double TaxRent = Taxbasicfraction + percentagetax;
-        System.out.println(" The Tax of the rent is " + TaxRent);
+        return TaxRent;
     }
 
-    private static void ShowTaxRentCase7(double taxbase) {
-        double Basicfraction = 64297;
-        //calculate
-        double residue = taxbase - Basicfraction;
-        double percentagetax = residue * 0.25;
-        double Taxbasicfraction = 8440;
+    private static double CalculateTaxRentCase7(double Taxbasicfraction, double percentagetax) {
         double TaxRent = Taxbasicfraction + percentagetax;
-        System.out.println(" The Tax of the rent is " + TaxRent);
+        return TaxRent;
     }
 
-    private static void ShowTaxRentCase6(double taxbase) {
-        double Basicfraction = 42874;
-        //calculate
-        double residue = taxbase - Basicfraction;
-        double percentagetax = residue * 0.20;
-        double Taxbasicfraction = 4156;
+    private static double CalculateRentCase6(double Taxbasicfraction, double percentagetax) {
         double TaxRent = Taxbasicfraction + percentagetax;
-        System.out.println(" The Tax of the rent is " + TaxRent);
+        return TaxRent;
     }
 
-    private static void ShowTaxRentCase5(double taxbase) {
-        double Basicfraction = 21442;
-        //calculate
-        double residue = taxbase - Basicfraction;
-        double percentagetax = residue * 0.15;
-        double Taxbasicfraction = 941;
+    private static double CalculateTaxRentCase5(double Taxbasicfraction, double percentagetax) {
         double TaxRent = Taxbasicfraction + percentagetax;
-        System.out.println(" The Tax of the rent is " + TaxRent);
+        return TaxRent;
     }
 
-    private static void ShowTaxRentCase4(double taxbase) {
-        double Basicfraction = 17854;
-        //calculate
-        double residue = taxbase - Basicfraction;
-        double percentagetax = residue * 0.12;
-        double Taxbasicfraction = 511;
+    private static double CalculateRentCase4(double Taxbasicfraction, double percentagetax) {
         double TaxRent = Taxbasicfraction + percentagetax;
-        System.out.println(" The Tax of the rent is " + TaxRent);
+        return TaxRent;
     }
 
-    private static void ShowTaxRentCase3(double taxbase) {
-        double Basicfraction = 14285;
-        //calculate
-        double residue = taxbase - Basicfraction;
-        double percentagetax = residue * 0.10;
-        double Taxbasicfraction = 154;
+    private static double CalculateTaxRentCase3(double Taxbasicfraction, double percentagetax) {
         double TaxRent = Taxbasicfraction + percentagetax;
-        System.out.println(" The Tax of the rent is " + TaxRent);
+        return TaxRent;
     }
 
-    private static void ShowTaxRentCase2(double taxbase) {
-        double Basicfraction = 11212;
-        //calculate
-        double residue = taxbase - Basicfraction;
-        double percentagetax = residue * 0.05;
-        double Taxbasicfraction = 0;
+    private static double CalculateRentCase2(double Taxbasicfraction, double percentagetax) {
         double TaxRent = Taxbasicfraction + percentagetax;
-        System.out.println(" The Tax of the rent is " + TaxRent);
+        return TaxRent;
     }
 
-    private static void ShowTaxRentcase1(double taxbase) {
-        double Basicfraction = 0;
-        //calculate
-        double residue = taxbase - Basicfraction;
-        double percentagetax = residue * 0.00;
-        double Taxbasicfraction = 0;
+    private static void CalculateTaxRentCase1(double Taxbasicfraction, double percentagetax) {
         double TaxRent = Taxbasicfraction + percentagetax;
-        System.out.println(" You shoul not do any contribution");
     }
 
-    private static double GetTaxBase(Scanner input) {
-        double income;
-        double expenses;
+    private static double CalculateTaxBase(double income, double expenses) {
         double taxbase;
-        System.out.println("Write your income, please");
-        income = input.nextDouble();
-        System.out.println("Write your expensess");
-        expenses = input.nextDouble();
         taxbase = income - expenses;
-        System.out.println("Your taxbase is ->" + taxbase);
         return taxbase;
     }
 
-    public static double GetTaxIva(double costofproduct, double percentage) {
-        double TaxIva;
-        double Totalcost;
-
-        TaxIva = costofproduct * 0.12;
-        Totalcost = costofproduct + TaxIva;
-
+    private static double CalculateTaxIVa(double costofproduct, double percentage) {
+        double TaxIva = costofproduct * percentage;
         return TaxIva;
     }
+
+    
 
 }
