@@ -21,49 +21,54 @@ public class HW15MatrixOperation {
 
 
         Scanner scanner = new Scanner(System.in);
-        
+
         int m;
         int n;
-        int a[][]= scanner.nextInt();
-        int b[][];
+        int matrixA[][];
+        int matrixB[][];
+        int sumMatrix[][];
+       
 
-        System.out.println(" Please enter de dimension m -> ");
+        //The dimension of a matrix is mxn 
+        System.out.println("Enter de dimension m of matrix A");
         m = scanner.nextInt();
-        System.out.println(" Please enter de dimension n -> ");
+        System.out.println("Enter de dimension n of matrix A");
         n = scanner.nextInt();
-        
-        int matrix [][] = new int[m][n];
-        a[][]=
-        
-        for(int i = 0 ; i < m ; i++){
-            for (int j = 0 ; j < n ; j++) {
-                matrix[i][j] = a[i][j] + b[i][j];
+        System.out.println(" Enter of number of matrix A");
+  
+        matrixA = new int[m][n];
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                matrixA[i][j] = scanner.nextInt();
             }
         }
 
-        System.out.println("The additon of matrix A -> ");
-        
-        for(int i = 0 ; i < m ; i++){
-            System.out.println("");
-            for (int j = 0 ; j < n ; j++) {
-                System.out.print("\t " + c[i][j]);
+        System.out.println("Enter de dimension m of matrix B");
+        m = scanner.nextInt();
+        System.out.println("Enter de dimension n of matrix B");
+        n = scanner.nextInt();
+        System.out.println(" Enter of number of matrix B");
+        matrixB = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                matrixB[i][j] = scanner.nextInt();
             }
         }
         
-        System.out.println("\nAnd Matrix B -> ");
-        for(int i = 0 ; i < 3 ; i++){
-            System.out.println("");
-            for (int j = 0 ; j < 3 ; j++) {
-                System.out.print("\t " + c[i][j]);
+        sumMatrix = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                sumMatrix[i][j] = matrixA[i][j] + matrixB[i][j];
             }
         }
 
-        System.out.println("\nequals to -> ");
-                for(int i = 0 ; i < 3 ; i++){
-            System.out.println("");
-            for (int j = 0 ; j < 3 ; j++) {
-                System.out.print("\t " + c[i][j]);
+        System.out.println("The sum of this matrix is");
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(sumMatrix[i][j] + "\t");
             }
+            System.out.println();
         }
 
         
