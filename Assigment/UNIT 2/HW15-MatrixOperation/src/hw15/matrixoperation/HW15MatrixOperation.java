@@ -22,7 +22,7 @@ public class HW15MatrixOperation {
 
         Scanner scanner = new Scanner(System.in);
 
-        int m;
+        int m ;
         int n;
         int matrixA[][];
         int matrixB[][];
@@ -30,12 +30,14 @@ public class HW15MatrixOperation {
        
 
         //The dimension of a matrix is mxn 
-        System.out.println("Enter de dimension m of matrix A");
+        System.out.println("Enter dimensions of matrix");
+        System.out.println("Enter de dimension m of matrix ");
         m = scanner.nextInt();
-        System.out.println("Enter de dimension n of matrix A");
+        System.out.println("Enter de dimension n of matrix");
         n = scanner.nextInt();
+        
+        
         System.out.println(" Enter of number of matrix A");
-  
         matrixA = new int[m][n];
 
         for (int i = 0; i < m; i++) {
@@ -44,10 +46,7 @@ public class HW15MatrixOperation {
             }
         }
 
-        System.out.println("Enter de dimension m of matrix B");
-        m = scanner.nextInt();
-        System.out.println("Enter de dimension n of matrix B");
-        n = scanner.nextInt();
+      
         System.out.println(" Enter of number of matrix B");
         matrixB = new int[m][n];
         for (int i = 0; i < m; i++) {
