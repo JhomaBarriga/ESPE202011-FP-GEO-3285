@@ -63,7 +63,7 @@ public class WS17MatrixTransposition {
             System.out.println("\t");
         }
         System.out.println(" T");
-        prettyPrintMatrix(m, n, t);
+        prettyPrintMatrix(n, m, t);
 
         System.out.println("--The sum of matrices is--");
 
