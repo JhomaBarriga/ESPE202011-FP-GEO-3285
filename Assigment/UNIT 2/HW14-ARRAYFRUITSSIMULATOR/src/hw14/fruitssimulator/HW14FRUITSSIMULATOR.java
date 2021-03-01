@@ -32,7 +32,7 @@ public class HW14FRUITSSIMULATOR {
 
         //vegetablesBasquet[0] 
         //vegetablesBasquet[4] , etc 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {s
             System.out.print("Enter the number of vegetables that there are in the basquet " + (i + 1) + " -> ");
             vegetablesBasquet[i] = input.nextInt();
         }
