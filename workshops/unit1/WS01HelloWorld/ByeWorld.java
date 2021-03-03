@@ -7,6 +7,6 @@ thanks
 */
 class HelloWorld{
     public avoid main(String[] arg){
-	  System.out.println("Hello World from Karen Barriga");
+	System.out.println("Hello World from Karen Barriga");
 	}
 }
