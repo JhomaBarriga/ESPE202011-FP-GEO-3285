@@ -21,6 +21,9 @@ public class WS10FUCTIONS {
         float quotient =0;
         int x =0;
         int y=0;
+        
+        
+        System.out.println(" AUTHOR KAREN JHOMARA BARRIGA CARVAJAL ");
 
         // call to divideTwoNumbers() function
         
