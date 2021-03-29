@@ -1,0 +1,4 @@
+Peppers,Green,3,0.75
+Tomato,Red,5,0.25
+Lettuce,Green,4,0.5
+Carrot,Orange,5,0.8nullPeppers,Green,5,0.75nullPepper,Green,4,0.75nullTomato,Red,5,0.25nullPEAS,Green,2,0.5nullCucumber,Green,5,0.4
