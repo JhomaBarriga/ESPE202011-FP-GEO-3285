@@ -15,7 +15,7 @@ import ec.edu.espe.Supermarket.model.Vegetables;
 public class VegetablesController {
 
     public void save(Vegetables vegetables) {
-        String data = vegetables.getName() + "," + vegetables.getColor() + "," + vegetables.getCant() + "," + vegetables.getCost();
+        String data = vegetables.getName() + ";" + vegetables.getColor() + ";" + vegetables.getCant() + ";" + vegetables.getCost();
         FileManager.save(data, "vegetables");
 
     }
@@ -23,7 +23,7 @@ public class VegetablesController {
     public String read() {
 
         String data;
-        data = FileManager.read("vegetables");
+        data = FileManager.read("vegetables.csv");
         return data;
     }
 }

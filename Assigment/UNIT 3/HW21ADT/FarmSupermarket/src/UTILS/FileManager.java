@@ -6,6 +6,7 @@
 package UTILS;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -19,8 +20,8 @@ public class FileManager {
     public static boolean createFile(String fileName) {
         boolean created = false;
         try {
-            java.io.File file = new java.io.File(fileName + ".txt");
-            if (file.createNewFile()) {
+           File file = new File(fileName + ".txt");
+            if (file.createNewFile()) { 
                 System.out.println("file was created");
 
                 created = true;
@@ -41,9 +42,9 @@ public class FileManager {
         createFile(fileName);
 
         try {
-            FileWriter ayWrite = new FileWriter(fileName + ".txt", true);
-            ayWrite.write(System.getProperty("Line.separator") + data);
-            ayWrite.close();
+            FileWriter myWrite = new FileWriter(fileName + ".csv", true);
+            myWrite.write(System.getProperty("Line.separator") + data);
+            myWrite.close();
             System.out.println("a new record of" + fileName + "was saved");
             saved = true;
 
@@ -56,11 +57,11 @@ public class FileManager {
 
     public static String read(String fileName) {
         fileName = null;
-        String data = null;
+        String data = " ";
         String document = "C:\\Users\\Sony Vaio\\Programación\\ESPE202011-FP-GEO-3285\\Assigment\\UNIT 3\\HW21ADT\\FarmSupermarket\\vegetables.txt";
         try (BufferedReader textBr = new BufferedReader(new FileReader(document))) {
             while ((fileName = textBr.readLine()) != null) {
-                data = fileName;
+                data += fileName + "\n";
             }
         } catch (IOException e) {
             System.out.println(" There is a error.");

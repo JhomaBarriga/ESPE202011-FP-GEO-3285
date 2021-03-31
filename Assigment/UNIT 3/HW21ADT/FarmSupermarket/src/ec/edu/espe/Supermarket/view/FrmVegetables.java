@@ -40,10 +40,10 @@ public class FrmVegetables extends javax.swing.JFrame {
         txtCost = new javax.swing.JTextField();
         btmSave = new javax.swing.JButton();
         cmbCant = new javax.swing.JComboBox<>();
-        btmAreVegetables = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtShowVegetables = new javax.swing.JTextArea();
         txtColor = new javax.swing.JTextField();
+        btmAreVegetables = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 204, 51));
@@ -73,20 +73,19 @@ public class FrmVegetables extends javax.swing.JFrame {
 
         cmbCant.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5" }));
 
-        btmAreVegetables.setBackground(new java.awt.Color(0, 255, 51));
-        btmAreVegetables.setText("SHOW VEGETABLES");
-        btmAreVegetables.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmAreVegetablesActionPerformed(evt);
-            }
-        });
-
         txtShowVegetables.setBackground(new java.awt.Color(204, 255, 204));
         txtShowVegetables.setColumns(20);
         txtShowVegetables.setRows(5);
         jScrollPane1.setViewportView(txtShowVegetables);
 
         txtColor.setBackground(new java.awt.Color(204, 255, 204));
+
+        btmAreVegetables.setText("Show Vegetables");
+        btmAreVegetables.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmAreVegetablesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -124,11 +123,11 @@ public class FrmVegetables extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(142, 142, 142)
-                                .addComponent(btmAreVegetables))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGap(16, 16, 16)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(168, 168, 168)
+                                .addComponent(btmAreVegetables)))
                         .addContainerGap(116, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -141,7 +140,7 @@ public class FrmVegetables extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
                             .addComponent(txtCost, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
@@ -173,24 +172,22 @@ public class FrmVegetables extends javax.swing.JFrame {
         String color;
         int cant;
         float cost;
-        
+
         VegetablesController vegetablesController = new VegetablesController();
 
         name = txtName.getText();
         cost = Float.parseFloat(txtCost.getText());
         cant = Integer.parseInt(cmbCant.getSelectedItem().toString());
         color = txtColor.getText();
-        
 
-        vegetables = new Vegetables(name ,color ,cant ,cost);
+        vegetables = new Vegetables(name, color, cant, cost);
         vegetablesController.save(vegetables);
-        JOptionPane.showMessageDialog(rootPane,vegetables.getName());
+        JOptionPane.showMessageDialog(rootPane, vegetables.getName());
     }//GEN-LAST:event_btmSaveActionPerformed
 
     private void btmAreVegetablesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmAreVegetablesActionPerformed
-        
-     VegetablesController vegetablesController = new VegetablesController();
-     txtShowVegetables.setText(vegetablesController.read());
+        VegetablesController vegetablesController = new VegetablesController();
+        txtShowVegetables.setText(vegetablesController.read());
     }//GEN-LAST:event_btmAreVegetablesActionPerformed
 
     /**
